@@ -1,5 +1,6 @@
 // frontend/src/components/common/Sidebar.js - Enhanced version
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   List,
   ListItem,
@@ -207,5 +208,9 @@ function Sidebar({ onNavigate }) {
     </Box>
   );
 }
+
+Sidebar.propTypes = {
+  onNavigate: PropTypes.func.isRequired,  // or .func if optional
+};
 
 export default Sidebar;
